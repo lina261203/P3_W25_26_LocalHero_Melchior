@@ -6,6 +6,10 @@ import "../styles/pages/ExperienceSheetPage.css";
 
 import MapImage from "../assets/ExperienceSheet.png";
 
+   {/*Die Animationslogik zum plazieren von Icons auf der Karte, wurde mit KI Unterstützung generiert. 
+    Die Implementierung, Integration und Anpassung erfolgte eigenständig.
+    Ausblick: In Zukunft könnte man die von ChatGPT generierten Icons noch durch NPM-packages austauschen.*/}
+
 const ICONS = [
   { id: "pin", label: "📍" },
   { id: "flag", label: "🚩" },

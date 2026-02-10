@@ -5,6 +5,11 @@ import PrimaryButton from "../components/PrimaryButton.jsx";
 import "../styles/pages/CommentSectionPage.css";
 import { User } from "lucide-react";
 
+  {/* KI-Hinweis: Die grundlegende Logik der Comment-Section (Erstellen und Anzeigen von Kommentaren)
+      wurde mithilfe von KI generiert. Da kein Backend angebunden ist, erfolgt die
+      Speicherung der Kommentare ausschließlich lokal (z. B. im State) und nur
+      für die Dauer der aktuellen Session (bis zum Refresh).
+      Das Styling sowie die Integration in die Seite wurden eigenständig umgesetzt. */}
 
 const ARTICLES = {
   weltkulturerbe: {
