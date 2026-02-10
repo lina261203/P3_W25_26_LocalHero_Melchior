@@ -1,0 +1,74 @@
+.galleryPage {
+  min-height: 100vh;
+  width: 100%;
+  background: #f3f3f3;
+
+  padding: 18px 18px 110px;
+  box-sizing: border-box;
+}
+
+.galleryCard {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+.galleryTitle {
+  text-align: center;
+  font-size: 28px;
+  margin: 8px 0 18px;
+}
+
+.galleryGrid {
+  width: 100%;
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.galleryTile {
+  position: relative;
+  height: 170px;
+  border: none;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  outline: none;
+  font: inherit;
+}
+
+.galleryTile:active {
+  transform: scale(0.99);
+}
+
+.lockBadge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #ff8a2b;
+  color: #fff;
+  font-size: 14px;
+}
+
+.tileFooter {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #333;
+}

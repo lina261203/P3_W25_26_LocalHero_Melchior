@@ -1,0 +1,181 @@
+.sheetPage {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.sheetPhoneFrame {
+  width: min(92vw, 420px);
+  height: min(92vh, 860px);
+  background: #f7f7f7;
+  border-radius: 26px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding-bottom: 72px;
+  box-sizing: border-box;
+}
+
+.sheetHeader {
+  background: #ffffff;
+  padding: 12px 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sheetHeader h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 0.02em;
+}
+
+.sheetMain {
+  overflow: hidden;            
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 1fr auto auto; 
+}
+
+.sheetMapCard {
+  position: relative;
+  width: 100%;
+  min-height: 420px;   
+  height: 100%;      
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.sheetMapImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.sheetPlacedIcon {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  font-size: 20px;
+  background: #fff;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 6px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.sheetPlacedIcon:active {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.sheetMetaRow {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.sheetMetaLabel {
+  opacity: 0.65;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.sheetMetaValue {
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.sheetNotesCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 10px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.sheetNotesTitle {
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.sheetNotesHint {
+  font-size: 11px;
+  opacity: 0.75;
+  margin-bottom: 8px;
+}
+
+.sheetTray {
+  display: grid;
+  grid-template-columns: 36px 1fr 36px;
+  gap: 10px;
+  align-items: center;
+}
+
+.sheetTrayArrow {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.sheetTrayScroller {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 2px;
+  scroll-behavior: smooth;
+}
+
+.sheetTrayScroller::-webkit-scrollbar {
+  height: 0px;
+}
+
+.sheetTrayItem {
+  flex: 0 0 auto;
+  width: 54px;
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  display: grid;
+  place-items: center;
+  cursor: grabbing
+}
+
+.sheetTrayItem:active {
+  cursor: grabbing;
+  outline-offset: 2px;
+}
+
+.sheetTrayIcon {
+  font-size: 18px;
+}
+
+.sheetActions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding-bottom: 0;
+  margin-bottom: 8px;  
+}
+
+.sheetActions .primaryButton {
+  width: 100%;
+  border-radius: 999px;
+  padding: 12px 14px;  
+}
+

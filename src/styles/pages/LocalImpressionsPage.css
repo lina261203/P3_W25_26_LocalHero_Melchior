@@ -1,0 +1,130 @@
+.impressionsItem {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 128px 1fr; /* Bild etwas größer */
+  gap: 14px;
+  padding: 14px;
+  text-align: left;
+
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px; /* weniger als vorher */
+  cursor: pointer;
+}
+
+.impressionsItem:active {
+  transform: translateY(1px);
+}
+
+.impressionsThumb {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.impressionsText {
+  display: grid;
+  gap: 6px;
+  align-content: start;
+  padding-top: 2px;
+}
+
+.impressionsTitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.impressionsAuthorRow {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 8px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.impressionsAvatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #f28b2a;
+}
+
+.impressionsMeta {
+  min-width: 0;
+}
+
+.impressionsAuthor {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.1;
+}
+
+.impressionsList {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  overflow: auto;
+}
+
+.impressionsTag {
+  display: inline-block;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.12);
+  font-size: 12px;
+}
+
+.impressionsInfo {
+  font-size: 11px;
+  opacity: 0.65;
+}
+
+.localCardImg {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.localCardImgWrap {
+  position: relative;
+  width: 110px;
+  height: 110px;
+}
+
+.localCardImgWrap .badge {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 6px;
+  border-radius: 999px;
+}
+
+.avatarDot {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #ff8a2b;
+
+  display: grid;
+  place-items: center;
+  flex: 0 0 28px; 
+}
+
+.avatarIcon {
+  width: 16px;
+  height: 16px;
+  color: #fff; 
+}
+
+.impressionsHeader {
+  text-align: center;
+}

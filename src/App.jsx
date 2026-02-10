@@ -1,35 +1,114 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+import RoleSelectPage from "./pages/RoleSelectPage";
+import SignUpPage from "./pages/SignUpPage";
+import LetsGoPage from "./pages/LetsGoPage";
+import WalkingPage from "./pages/WalkingPage";
+import ExperienceSheetPage from "./pages/ExperienceSheetPage";
+import LocalImpressionsPage from "./pages/LocalImpressionsPage";
+import GalleryPage from "./pages/GalleryPage"; // <-- NEU (Step 2)
+import CommentSectionPage from "./pages/CommentSectionPage";
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+const RoleContext = createContext(null);
+
+export function useRole() {
+  const ctx = useContext(RoleContext);
+  if (!ctx) throw new Error("useRole must be used within <RoleProvider />");
+  return ctx;
 }
 
-export default App
+function RoleProvider({ children }) {
+  const [role, setRole] = useState(() => localStorage.getItem("role") || null);
+
+  useEffect(() => {
+    if (role) localStorage.setItem("role", role);
+    else localStorage.removeItem("role");
+  }, [role]);
+
+  const value = useMemo(() => ({ role, setRole }), [role]);
+  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;
+}
+
+function RequireRole({ children }) {
+  const { role } = useRole();
+  if (!role) return <Navigate to="/" replace />;
+  return children;
+}
+
+export default function App() {
+  return (
+    <RoleProvider>
+      <Routes>
+        <Route path="/" element={<RoleSelectPage />} />
+
+        <Route
+          path="/signup"
+          element={
+            <RequireRole>
+              <SignUpPage />
+            </RequireRole>
+          }
+        />
+
+        <Route
+          path="/letsgo"
+          element={
+            <RequireRole>
+              <LetsGoPage />
+            </RequireRole>
+          }
+        />
+
+        <Route
+          path="/walking"
+          element={
+            <RequireRole>
+              <WalkingPage />
+            </RequireRole>
+          }
+        />
+
+        <Route
+          path="/experience"
+          element={
+            <RequireRole>
+              <ExperienceSheetPage />
+            </RequireRole>
+          }
+        />
+
+        <Route
+          path="/gallery"
+          element={
+            <RequireRole>
+              <GalleryPage />
+            </RequireRole>
+          }
+        />
+
+        <Route
+          path="/impressions"
+          element={
+            <RequireRole>
+              <LocalImpressionsPage />
+            </RequireRole>
+          }
+        />
+
+        <Route
+          path="/impressions/:id"
+          element={
+           <RequireRole>
+              <CommentSectionPage />
+           </RequireRole>
+           }
+/>
+
+
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </RoleProvider>
+  );
+}

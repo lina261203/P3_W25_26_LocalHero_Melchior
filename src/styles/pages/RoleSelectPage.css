@@ -1,0 +1,54 @@
+.roleSelect {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+}
+
+.roleHalf {
+  border-radius: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.roleHalf--newbie {
+  background: #bfe3ff;
+}
+
+.roleHalf--local {
+  background: #2f5fd3; 
+}
+
+.roleHalf__label {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-size: 96px;
+}
+
+.roleHint {
+  color: #000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  pointer-events: none; 
+}
+
+.roleHint__box {
+  background: #ffffff;
+  padding: 10px 25px;
+  border-radius: none;
+  font-size: 13px;
+  line-height: 1.2;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}

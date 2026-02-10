@@ -1,0 +1,123 @@
+
+.signUpPage {
+  padding: 4vh 6vw;
+
+  font-size: 24px;
+
+  padding-bottom: calc(4vh + 90px);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  margin: 0 0 12px 0;
+  font-weight: 700;
+}
+
+.nextWalktalkCard {
+  width: auto;
+  background-color: #99A39B;
+  margin-bottom: 24px;
+  color: #FCFCFC;
+  font-size: 36px;
+}
+
+.nextWalktalkCard p {
+  margin: 0;
+}
+
+.appointmentList {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.appointmentList .card:hover {
+  transform: translateY(-1px);
+}
+
+.appointmentList .selected {
+  background-color: #B8DDF7;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.25));
+  background-color: #FCFCFC;
+  padding-left: 15px;
+}
+
+.signUpActions {
+  position: sticky;
+
+  bottom: 70px;
+
+  margin-top: 3vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vh;
+
+  padding: 12px 0 10px 0;
+  background: linear-gradient(
+    to top,
+    #ffffff 85%,
+    rgba(255, 255, 255, 0.85) 100%
+  );
+
+  z-index: 5;
+}
+
+.signUpActions::before {
+  content: "";
+  height: 1px;
+  background: rgba(0, 0, 0, 0.06);
+  margin-bottom: 10px;
+}
+
+.startHint {
+  font-size: 12px;
+  text-align: center;
+  opacity: 0.65;
+}
+
+.signUpActions button:disabled {
+  background-color: #cfd8dc;
+  color: #ffffff;
+  opacity: 1;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.signUpActions .isDisabled {
+  background-color: #cfd8dc !important;
+  color: #ffffff !important;
+  cursor: not-allowed !important;
+  pointer-events: none;
+  opacity: 1 !important;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 15px;
+}
+
+.startButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.startButton p {
+  margin: 0;
+  font-size: 16px;
+}
