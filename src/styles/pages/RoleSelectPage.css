@@ -31,8 +31,12 @@
   font-size: 96px;
 }
 
+.local {
+  color: white;
+}
+
 .roleHint {
-  color: #000;
+  color: #000000;
   position: absolute;
   left: 0;
   right: 0;

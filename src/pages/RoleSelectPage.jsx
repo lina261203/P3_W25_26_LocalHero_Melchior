@@ -20,7 +20,7 @@ export default function RoleSelectPage() {
         className="roleHalf roleHalf--newbie"
         onClick={() => pick("newbie")}
       >
-        <span className="roleHalf__label">NEWBIE</span>
+        <span className="roleHalf__label ">NEWBIE</span>
       </button>
 
       <div className="roleHint">
@@ -35,7 +35,7 @@ export default function RoleSelectPage() {
         className="roleHalf roleHalf--local"
         onClick={() => pick("local")}
       >
-        <span className="roleHalf__label">LOCAL</span>
+        <span className="roleHalf__label local">LOCAL</span>
       </button>
 
     </div>
